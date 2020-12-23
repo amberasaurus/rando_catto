@@ -1,4 +1,6 @@
 import React from 'react';   
+import './Cat.css';
+
 const Cat = props => {  
     return (
         <img className="cat-img" src={props.cat.url} alt="A random cat" 

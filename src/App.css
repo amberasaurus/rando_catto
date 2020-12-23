@@ -5,40 +5,83 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
 }
 
-.meow-btn {
+.App > header {
+  grid-area: header;
+}
+
+.App > main {
+  grid-area: main;
+  padding: 15px 5px 10px 5px;
+}
+
+.App > footer {
+  grid-area: footer;
+}
+
+.btn {
   font-size: 1rem;
   background-color: pink;
   border: 0px;
-  border-radius: 5px 5px 5px 5px;
   padding: 5px;
-  position: absolute;
-  z-index: 1;
+  height: 100%;
 }
 
-.save-btn {
-  z-index: 1;
+.save-btn, .clear-btn {
+  float: right;
 }
 
-.meow-btn:hover{
-  background-color: darkmagenta;
+.btn:hover{
+  background-color: rgb(240, 130, 148);
   cursor: pointer;
-}
-
-.cat-img {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
+  color: white;
 }
 
 #cat-background {
   background-color: white;
+}
+
+.header {
+  z-index: 1;
+  opacity: 0.9;
+  background-color: pink;
+  position: relative;
+  height: 45px;
+}
+
+.footer {
+  height: 45px;
+  z-index: 1;
+  opacity: 0.9;
+  background-color: pink;
+  display: inline-grid;
+  grid-column-gap: 50px;
+  grid-template-columns: 0.5fr 0.5fr
+}
+
+.footer .link {
+  color: black;
+  text-decoration: none;
+}
+
+.footer .link:visited {
+  color: black;
+}
+
+.footer .link:hover{
+  color: white;
+}
+
+.footer div {
+  margin: auto;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import RandomCatService from './RandomCatService';
-import Cat from './Cat';
+import RandomCatService from './services/RandomCatService';
+import Cat from './components/Cat';
 import * as htmlToImage from 'html-to-image';
 import { saveAs } from 'file-saver';
 
@@ -31,14 +31,29 @@ const App = ({catName}) => {
     });
   }
 
+  const clear = () => {
+    setAddedCats([]);
+  }
+
   return (
     <div className="App">
-      <button type="button" className="meow-btn" onClick={addMoreCats}>Meow</button>
-      <button type="button" className="save-btn" onClick={save}>Save</button>
+      <div class="header">
+        <button type="button" className="btn meow-btn" onClick={addMoreCats}>Meow</button>
+        <button type="button" className="btn clear-btn" onClick={clear}>Clear</button>
+        <button type="button" className="btn save-btn" onClick={save}>Save</button>
+      </div>
       <div id="cat-background">
         {addedCats.map((cat, index) => <div key={index}><Cat cat={cat}/></div> )}
       </div>
-    </div>
+      <div class="footer">
+        <div>
+          <a href="https://www.pexels.com" className="link">Photos provided by Pexels</a>
+        </div>
+        <div>
+          <a href="https://freesound.org" className="link">Sounds provided by Freesound</a>
+        </div>
+      </div>
+  </div>
   );
 }
 
