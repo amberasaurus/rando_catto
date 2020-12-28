@@ -38,7 +38,7 @@ const App = ({catName}) => {
   return (
     <div className="App">
       <div class="header">
-        <button type="button" className="btn meow-btn" onClick={addMoreCats}>Meow</button>
+        <button type="button" className="btn meow-btn" onClick={addMoreCats}>Add More Cats</button>
         <button type="button" className="btn clear-btn" onClick={clear}>Clear</button>
         <button type="button" className="btn save-btn" onClick={save}>Save</button>
       </div>
