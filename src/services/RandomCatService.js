@@ -17,8 +17,7 @@ const RandomCatService = {
                 });
             }
             catch (error) {
-                //any http error
-                // throw something ?
+                throw error;
             }
             return this.getRandoCat();
         }
