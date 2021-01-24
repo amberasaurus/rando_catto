@@ -4,6 +4,10 @@ This is a small project created during the 2020 pandemic to cheer myself up. It 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Preview:
+
+[![Screenshot-2021-01-24-Rando-Catto.jpg](https://i.postimg.cc/VLCJ4kBC/Screenshot-2021-01-24-Rando-Catto.jpg)](https://postimg.cc/sv3fgyLj)
+
 ## Getting Started
 
 You will need to get your own Pexels api key in order to run this project locally: https://www.pexels.com/api/. 
